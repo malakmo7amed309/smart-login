@@ -1,0 +1,19 @@
+
+ 
+body{
+    background-color: #F7ECDE;
+}
+
+.form-heading {
+  background: linear-gradient(to right, #56ab2f, #f2d50f); 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/* readable secondary text on the cream background */
+body .text-note, body p[style*="color: white"], body p[style*="color:white"] {
+  color: #352E28 !important;
+}
+.custom-navbar {
+  background-color: #352E28;
+  padding: 10px 0;
+}
