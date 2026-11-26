@@ -1,37 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome - Smart Login System</title>
-    
-    <link rel="stylesheet" href="CSS/all.min.css">
-    <link rel="stylesheet" href="CSS/bootstrap.min.css">
-    <link rel="stylesheet" href="CSS/style.css">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Profile - Smart Login System</title>
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Smart Login System" />
+  <meta property="og:description" content="Login and signup demo with client-side validation, hashed passwords and a profile page, stored in your browser with localStorage." />
+  <meta property="og:url" content="https://malakmo7amed309.github.io/smart-login/" />
+  <meta property="og:image" content="https://malakmo7amed309.github.io/smart-login/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="stylesheet" href="CSS/bootstrap.min.css">
+  <link rel="stylesheet" href="CSS/style.css">
 </head>
-<body class="body">
-
-<nav class="navbar custom-navbar">
-  <div class="  container-fluid d-flex justify-content-between align-items-center">
-    <span class="navbar-brand mb-0 h1 text-white">SMART LOGIN</span>
-    <button id="logoutBtn" class="btn btn-outline-warning">Logout</button>
+<body>
+<nav class="topnav"><strong>SMART LOGIN</strong><button id="logoutBtn" class="btn-ghost" type="button">Logout</button></nav>
+<main class="dash">
+  <h1 id="welcome"></h1>
+  <p class="muted" id="since"></p>
+  <div class="cards">
+    <section class="card-box">
+      <h2>Profile</h2>
+      <form id="nameForm" novalidate>
+        <label class="lbl" for="newName">Display name</label>
+        <input class="form-control" id="newName" autocomplete="name">
+        <p id="nameMsg" class="msg d-none" role="status"></p>
+        <button class="btn-main" type="submit">Save name</button>
+      </form>
+    </section>
+    <section class="card-box">
+      <h2>Change password</h2>
+      <form id="pwForm" novalidate>
+        <label class="lbl" for="oldPw">Current password</label>
+        <input type="password" class="form-control" id="oldPw" autocomplete="current-password">
+        <label class="lbl" for="newPw">New password</label>
+        <input type="password" class="form-control" id="newPw" autocomplete="new-password">
+        <p id="pwMsg" class="msg d-none" role="status"></p>
+        <button class="btn-main" type="submit">Update password</button>
+      </form>
+    </section>
+    <section class="card-box danger">
+      <h2>Delete account</h2>
+      <p class="muted">Removes this account from this browser. This cannot be undone.</p>
+      <button id="deleteBtn" class="btn-danger" type="button">Delete my account</button>
+    </section>
   </div>
-</nav>
-
-
-
-
-         <div class=" all container my-5  mb-5">
-    <div class="text-center m-auto w-75 p-5">
-        <h1 class="fw-bold display-3" id="welcome" style="color: #17A2B8;"></h1>
-
-    </div>
-    </div>
-  
-    
-
-    <script src="JS/bootstrap.bundle.min.js"></script>
-    <script src="JS/main.js"></script>
+</main>
+<script src="JS/main.js"></script>
 </body>
 </html>

@@ -21,12 +21,17 @@ no backend, so it is a learning project, not production auth.
 - Login with inline error messages, no disruptive alerts
 - Protected welcome page: redirects to login when nobody is signed in
 - Logout clears the session
+- Passwords are salted and hashed (SHA-256, Web Crypto) before they are stored; accounts from v1 with plaintext passwords are upgraded on their next login
+- Show/hide password, strength meter, remember my email
+- Profile page: change display name, change password, delete account
+
+Note: this is client-side only. A real app needs a server and a slow password hash such as bcrypt or argon2.
 
 ## Tech stack
 
 - HTML5, CSS3
 - Vanilla JavaScript (localStorage)
-- Bootstrap 5 + Font Awesome
+- Bootstrap 5 (grid and form base) with custom CSS and inline SVG icons
 
 ## Run locally
 
